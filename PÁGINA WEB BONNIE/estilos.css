@@ -1,0 +1,415 @@
+html{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: "Bodoni";
+    src: url("fuentes/bodoni-flf-bold.ttf");
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("fuentes/lato-semibold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("fuentes/montserrat-variable-font-wght.ttf");
+}
+.barra-superior{
+    height: 12px;
+    background-color: #600808;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 10000;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: white;
+}
+
+body{
+    margin: 0;
+    padding-top: 152px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logo-contenedor{
+    height: 90px;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    height: 50px;
+}
+.menu-principal{
+    height: 50px;
+    background-color: #600808;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    
+}
+.menu-principal a{
+    color: white;
+    text-decoration: none;
+    font-family: "Lato";
+}
+.menu-principal a:hover{
+    opacity: 0.8;
+}
+
+.seccion-quienes{
+    padding: 80px 0;
+}
+
+.seccion-quienes h2{
+    font-family: "Bodoni";
+    font-size: 32px;
+    text-align: center;
+    color: #600808;
+}
+
+.seccion-quienes p{
+    font-family: "Montserrat";
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.seccion-quienes .col-md-6:first-child{
+    text-align: center;
+}
+.seccion-quienes img{
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.btn-conocenos{
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 12px 30px;
+
+    background-color: #600808;
+    color: white;
+
+    text-decoration: none;
+
+    font-family: "Bodoni";
+    font-size: 25px;
+
+    border-radius: 999px;
+
+    box-shadow: 0 8px 0 #400505;
+
+    transition: all 0.2s ease;
+}
+.btn-conocenos:hover{
+    background-color: #890C0C;
+}
+.btn-conocenos:active{
+    transform: translateY(8px);
+    box-shadow: 0 0 0 #400505;
+}
+.seccion-nosotros {
+    background-color: #EDD5FF;
+    padding: 80px 20px;
+    scroll-margin-top: 152px; 
+}
+.seccion-nosotros h2{
+    font-family: "Bodoni";
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #600808;
+}
+.integrante{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.integrante img{
+    width: 160px;
+    height: 160px;
+
+    object-fit: cover;
+
+    margin-bottom: 15px;
+}
+.integrante h3{
+    font-family: "Bodoni";
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.integrante h4{
+    font-family: "Lato";
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.integrante p{
+    font-family: "Montserrat";
+    font-size: 14px;
+
+    max-width: 250px;
+
+    margin: 0 auto;
+}
+.titulo-seccion-proyecto{
+    font-family: "Bodoni";
+    font-size: 40px;
+    color: #600808;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.img-proyecto{
+    width: 85%;
+    max-width: 800px;
+
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 55px;
+
+    border-radius: 30px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+}
+.seccion-proyecto{
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+.img-proyecto:hover{
+    transform: scale(1.03);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.50);
+}
+.contenido-proyecto{
+    text-align: center;
+}
+.titulo-proyecto{
+    width: 100%;
+    max-width: 450px;
+
+    display: block;
+    margin: 0 auto 30px auto;
+}
+.texto-proyecto{
+    font-family: "Montserrat";
+
+    font-size: 16px;
+
+    text-align: justify;
+
+    max-width: 500px;
+
+    margin: 0 auto 30px auto;
+}
+.btn-proyecto{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    margin: 20px auto 0 auto;
+
+    gap: 10px;
+
+    padding: 12px 30px;
+
+    background-color: #A0CC90;
+    color: #334e2a;
+
+    text-decoration: none;
+
+    font-family: "Bodoni";
+    font-size: 25px;
+
+    border-radius: 999px;
+
+    box-shadow: 0 10px 0 #7AA66A;
+
+    transition: all 0.2s ease;
+}
+.btn-proyecto:hover{
+    background-color: #8FBE7D;
+}
+.btn-proyecto:active{
+    transform: translateY(8px);
+
+    box-shadow: 0 0 0 #7AA66A;
+}
+.icono-bus{
+    width: 50px;
+    height: auto;
+}
+.seccion-contacto {
+    background-color: #EDD5FF;
+    padding: 100px 20px 60px;
+    text-align: center;
+    scroll-margin-top: 152px; 
+}
+.seccion-contacto h2{
+    font-family: "Bodoni";
+    font-size: 40px;
+    color: #600808;
+    margin-bottom: 20px;
+}
+.texto-contacto{
+    font-family: "Montserrat";
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+.img-contacto{
+    width: 80%;
+    max-width: 350px;
+    margin: 0 auto;
+    display: block;
+}
+
+.btn-Arriba{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: #600808;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 24px;
+    font-family: "Bodoni";
+
+    border-radius: 50%;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+
+    z-index: 9999;
+
+    transition: 0.3s ease;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.btn-Arriba:hover{
+    background-color: #890C0C;
+    transform: translateY(-3px);
+}
+.btn-Arriba.show{
+    opacity: 1;
+    visibility: visible;
+}
+.footer-nexxus{
+    background-color: #600808;
+    color: white;
+    padding: 60px 20px;
+    margin-top: 0px;
+}
+
+.footer-logo{
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.footer-nexxus h4{
+    font-family: "Bodoni";
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.footer-nexxus p,
+.footer-nexxus a{
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-nexxus a:hover{
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.footer-col{
+    margin-bottom: 20px;
+}
+.footer-col{
+    text-align: center;
+}
+
+/* 🔴 El contenedor se vuelve el límite de la capa */
+.contenedor-foto {
+    position: relative;
+    width: 160px; 
+    height: 160px;
+    margin: 0 auto 15px auto;
+    overflow: hidden;
+    border-radius: 50%; 
+}
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.capa-instagram {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(96, 8, 8, 0.7); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    text-decoration: none;
+}
+
+.icono-instagram {
+    width: 45px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.contenedor-foto:hover .capa-instagram {
+    opacity: 1;
+}
+
+.contenedor-foto:hover .icono-instagram {
+    transform: scale(1.1);
+}

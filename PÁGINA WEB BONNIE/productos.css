@@ -1,0 +1,788 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Cocogoose light";
+    src: url("fuentes/cocogoose-pro-light-trial.ttf");
+}
+@font-face {
+    font-family: "Cocogoose Bold";
+    src: url("fuentes/cocogoose-pro-regular-trial.ttf");
+}
+@font-face {
+    font-family: "Comforta";
+    src: url("fuentes/comfortaa-variableFont-wght.ttf");
+}
+
+/* 🔴 CONFIGURACIÓN DE PÁGINA PRODUCTOS */
+.body-productos {
+    margin: 0;
+    padding-top: 0;
+}
+
+/* 🔴 FRANJA SUPERIOR VERDE */
+.barra-superior-verde {
+    width: 100%;
+    height: 12px;
+    background-color: #A0CC90;
+}
+
+/* 🔴 ÁREA DEL LOGO BLANCO */
+.cabezote-logo {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contenedor-del-logo {
+    padding: 20px 0;
+}
+
+.imagen-logo {
+    width: 170px;
+    height: auto;
+}
+
+/* 🔴 MENÚ DE NAVEGACIÓN VERDE */
+.menu-navegacion-productos {
+    width: 100%;
+    background-color: #A0CC90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 14px 0;
+}
+
+.boton-enlace {
+    font-family: "Comforta", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* 🔴 EFECTOS Y ANIMACIONES DEL MENÚ */
+.boton-enlace:hover {
+    color: #000000;
+    opacity: 0.9;
+    animation: shake 0.4s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+/* 🔴 CONTENEDOR DE CONTENIDO PRINCIPAL */
+.seccion-contenido {
+    padding-top: 60px;
+    margin-bottom: 100px;
+}
+
+/* 🔴 DETALLES DE LA SECCIÓN EMPAQUE */
+.titulo-empaque {
+    font-family: "Cocogoose Bold", sans-serif;
+    font-weight: 700;
+    color: #D24672;
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* 🔴 CARRUSEL */
+.caja-bordes-redondos {
+    border: 15px solid #D24672;
+    border-radius: 80px; 
+    overflow: hidden;
+    width: 100%; 
+}
+
+.img-carrusel-fija {
+    display: block;
+    width: 100%;
+    height: 400px; 
+    object-fit: cover;
+    object-position: center; 
+}
+
+.boton-circulo {
+    background-color: transparent !important;
+    width: 55px !important;  
+    height: 55px !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    opacity: 1 !important;
+    border: none !important;
+}
+
+.carousel-control-prev {
+    left: -100px !important; 
+}
+
+.carousel-control-next {
+    right: -100px !important;
+}
+
+.img-flecha-carrusel {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.carousel-control-prev:hover .img-flecha-carrusel {
+    transform: scale(1.1) translateX(-4px);
+}
+
+.carousel-control-next:hover .img-flecha-carrusel {
+    transform: scale(1.1) translateX(4px);
+}
+
+.puntitos-carrusel {
+    position: relative !important;
+    bottom: 0 !important;
+    margin-top: 25px !important;
+    margin-bottom: 0 !important;
+    justify-content: center;
+}
+
+.puntitos-carrusel button {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 50% !important;
+    background-color: transparent !important;
+    border: 2px solid #D24672 !important;
+    margin: 0 6px !important;
+    opacity: 1 !important;
+    transition: all 0.3s ease;
+}
+
+.puntitos-carrusel button.active {
+    background-color: #D24672 !important;
+}
+.img-carrusel-fija {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center; 
+}
+
+/* 🔴 TEXTOS DE LA COLUMNA DE LA DERECHA */
+.descripcion-empaque {
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+.texto-descripcion {
+    font-family: "Comforta", sans-serif;
+    color: #555555;
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.titulo-contenido-lista {
+    font-family: "Cocogoose Bold", sans-serif;
+    color: #D24672; 
+    font-size: 25px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.lista-componentes {
+    font-family: "Comforta", sans-serif;
+    color: #444444;
+    list-style: none;
+    padding-left: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lista-componentes li {
+    margin-bottom: 10px;
+    font-size: 20px;
+    display: block;
+}
+
+/* flechas en computadores */
+@media (min-width: 768px) {
+    .carousel-control-prev {
+        left: -65px !important;
+    }
+    .carousel-control-next {
+        right: -65px !important;
+    }
+}
+/* 🔴 SECCIÓN LIBRO PRINCIPAL */
+.seccion-libro-amarilla {
+    background-color: #ffe3be; 
+    width: 100%;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.subtitulo-libro-bold {
+    font-family: "Cocogoose Bold", sans-serif;
+    font-weight: 700;
+    color: #ad6200;
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contenedor-logo-libro-seccion {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.logo-proyecto-seccion {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+}
+
+/* 🔴 Mockup Horizontal */
+.contenedor-portada-libro-central {
+    margin-bottom: 45px;
+    display: inline-block;
+    width: 100%;
+    max-width: 1000px; 
+}
+
+.portada-libro-efecto {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+.portada-libro-efecto:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+}
+
+/* Textos */
+.contenido-libro-bloque {
+    max-width: 750px; 
+    margin: 0 auto;
+}
+
+.sinopsis-libro {
+    font-family: "Comforta", sans-serif;
+    color: #000000;
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/*🔴 Información libro */
+.contenedor-circulos-info {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin: 50px 0;
+}
+
+.circulo-dato {
+    width: 125px;
+    height: 125px;
+    background-color: #D24672;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.circulo-dato span {
+    font-family: "Comforta", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+}
+
+.circulo-dato:hover {
+    transform: scale(1.08);
+}
+
+/* 🔴Boton */
+.bloque-boton-preview {
+    margin-top: 20px;
+}
+
+.btn-3d-preview {
+    font-family: "Cocogoose light", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #D24672;
+    text-decoration: none;
+    padding: 15px 45px;
+    border-radius: 35px;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 6px 0 #a02d51; 
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-3d-preview:hover {
+    background-color: #dc537e;
+    color: #ffffff;
+}
+
+.btn-3d-preview:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 0 #a02d51;
+}
+
+/* Ajustes móviles */
+@media (max-width: 767px) {
+    .seccion-libro-amarilla {
+        padding: 50px 0;
+    }
+    .logo-proyecto-seccion {
+        max-width: 280px;
+    }
+    .sinopsis-libro {
+        font-size: 17px;
+    }
+    .circulo-dato {
+        width: 110px; 
+    }
+    .circulo-dato span {
+        font-size: 14px;
+    }
+}
+
+/* 🔴 SECCIÓN COMPLEMENTOS */
+.seccion-complementos-rosa {
+    background-color: #e4ffda;
+    width: 100%;
+    padding: 80px 0;
+    clear: both;
+}
+
+.bloque-complemento {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Títulos con tu tipografía insignia */
+.titulo-complemento {
+     font-family: "Cocogoose Bold", sans-serif;
+    font-weight: 700;
+    color: #30641d;
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Contenedor y efectos para las imágenes de los productos */
+.contenedor-img-complemento {
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 100%;
+}
+
+.img-complemento-efecto {
+    max-height: 500px;
+    width: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+/* Efecto de levantamiento */
+.img-complemento-efecto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Descripciones*/
+.descripcion-complemento {
+    font-family: "Comforta", sans-serif;
+    color: #000000;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 767px) {
+    .seccion-complementos-rosa {
+        padding: 50px 0;
+    }
+    .titulo-complemento {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+    .descripcion-complemento {
+        font-size: 16px;
+    }
+    .img-complemento-efecto {
+        max-height: 280px;
+    }
+}
+/* 🔴  SECCIÓN MALETA ESTILO CAPARAZÓN */
+.seccion-maleta-rosa {
+    background-color: #ffc5d7; 
+    width: 100%;
+    position: relative;
+    clear: both;
+}
+.titulo-maleta {
+    font-family: "Cocogoose Bold", sans-serif;
+    font-weight: 700;
+    color: #D24672; /* Tu rosa fucsia */
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contenedor-imagenes-juntas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 45px;
+    flex-wrap: nowrap;
+}
+
+
+.img-maleta-efecto {
+    width: 100%;
+    max-height: 700px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+.img-maleta-efecto:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.25);
+}
+
+.contenido-maleta-bloque {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.descripcion-maleta {
+    font-family: "Comforta", sans-serif;
+    color: #000000;
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Adaptación para que en celulares */
+@media (max-width: 767px) {
+    .contenedor-imagenes-juntas {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .marco-foto-maleta {
+        max-width: 280px;
+    }
+    .img-maleta-efecto {
+        height: 320px; 
+    }
+    .titulo-maleta {
+        font-size: 26px;
+    }
+    .descripcion-maleta {
+        font-size: 17px;
+    }
+}
+
+/* --- 🔴 FOOTER BONNIE --- */
+.footer-bonnie {
+    background-color: #ffe3be;
+    color: #333333;
+    padding: 60px 0; 
+    clear: both; 
+}
+
+.footer-logo {
+    width: 250px; 
+    height: auto;
+    margin: 0 auto 15px auto;
+    display: block;
+    object-fit: contain;
+}
+
+.footer-bonnie p,
+.footer-bonnie a {
+    font-family: "Comforta", sans-serif; 
+    color: #444444;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.footer-bonnie .footer-titulo-amarillo {
+    font-family: "Cocogoose Bold", sans-serif;
+    color: #f1a240; 
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.link-instagram-footer {
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.link-instagram-footer:hover {
+    color: #D24672 !important; 
+    font-weight: bold;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-credito {
+    font-weight: bold;
+    font-size: 15px !important;
+    color: #333333 !important;
+}
+
+.footer-eslogan {
+    font-size: 14px !important;
+    font-style: italic;
+    line-height: 1.4;
+    color: #666666;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* Espaciado responsivo para que en celulares no se peguen las columnas */
+@media (max-width: 767px) {
+    .footer-col {
+        margin-bottom: 30px;
+    }
+    .footer-col:last-child {
+        margin-bottom: 0;
+    }
+}
+/*🔴 BOTON VOLVER ARRIBA */
+
+.btn-Arriba {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 100px;
+    height: 100px;
+    background-color: transparent; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.img-btn-arriba {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
+    transition: transform 0.3s ease;
+}
+
+.btn-Arriba:hover .img-btn-arriba {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.btn-Arriba.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 🔴 SECCIÓN FIGURA COLECCIONABLE */
+.seccion-figura-amarilla {
+    background-color: #ffffff; 
+    width: 100%;
+    padding: 80px 0;
+    clear: both;
+}
+
+.subtitulo-figura {
+    font-family: "Cocogoose Bold", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #D24672;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.titulo-figura-bonnie {
+    font-family: "Cocogoose Bold", sans-serif;
+    font-weight: 700;
+    color: #D24672;
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.contenedor-img-figura-central {
+    margin-bottom: 45px;
+    display: inline-block;
+    width: 100%;
+    max-width: 500px;
+}
+
+.figura-bonnie-efecto {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+/* Efecto en hover */
+.figura-bonnie-efecto:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+}
+
+/* Bloque de textos */
+.contenido-figura-bloque {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.descripcion-figura {
+    font-family: "Comforta", sans-serif;
+    color: #000000;
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* 🟡 SECCIÓN CAMISETA OFICIAL */
+.seccion-camiseta-amarilla {
+    background-color: #ffe3be; /* Tu amarillo insignia */
+    width: 100%;
+    padding: 80px 0 40px 0; /* Un poco menos de espacio abajo porque viene el divisor */
+    clear: both;
+}
+
+.subtitulo-camiseta {
+    font-family: "Cocogoose Bold", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.titulo-camiseta-bonnie {
+    font-family: "Cocogoose Bold", sans-serif;
+    font-weight: 700;
+    color: #ad6200; 
+    font-size: 46px;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Contenedor de la imagen de la camiseta */
+.contenedor-img-camiseta-central {
+    margin-bottom: 45px;
+    display: inline-block;
+    width: 100%;
+    max-width: 480px; 
+}
+
+.camiseta-bonnie-efecto {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+}
+
+/* Efecto de levitación interactivo */
+.camiseta-bonnie-efecto:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+}
+
+/* Bloque de texto */
+.contenido-camiseta-bloque {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.descripcion-camiseta {
+    font-family: "Comforta", sans-serif;
+    color: #000000;
+    font-size: 20px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 767px) {
+    .seccion-camiseta-amarilla {
+        padding: 50px 0 25px 0;
+    }
+    .titulo-camiseta-bonnie {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+    .descripcion-camiseta {
+        font-size: 17px;
+    }
+    .contenedor-img-camiseta-central {
+        margin-bottom: 30px;
+        max-width: 300px;
+    }
+}
+
+/* Ajustes adaptables para celulares */
+@media (max-width: 767px) {
+    .seccion-figura-amarilla {
+        padding: 50px 0;
+    }
+    .titulo-figura-bonnie {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+    .descripcion-figura {
+        font-size: 17px;
+    }
+    .contenedor-img-figura-central {
+        margin-bottom: 30px;
+        max-width: 320px; 
+    }
+}

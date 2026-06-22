@@ -1,0 +1,855 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Cocogoose light";
+    src: url("fuentes/cocogoose-pro-light-trial.ttf");
+}
+@font-face {
+    font-family: "Cocogoose Bold";
+    src: url("fuentes/cocogoose-pro-regular-trial.ttf");
+}
+@font-face {
+    font-family: "Comforta";
+    src: url("fuentes/comfortaa-variableFont-wght.ttf");
+}
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* 🔴 FRANJA SUPERIOR */
+.barra-superior {
+    height: 12px;
+    background-color: #A0CC90;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1050;
+}
+
+/* 🔴 HEADER FIJO (PC) */
+.header {
+    position: fixed;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1040;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 🔴 LOGO SUPERIOR */
+.logo-contenedor {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 55px;
+    display: block;
+}
+
+/*🔴 Oculto por defecto en computadoras */
+.menu-toggle {
+    display: none;
+}
+
+/* 🔴 MENÚ PC*/
+.menu-principal {
+    height: 50px;
+    background-color: #A0CC90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu-principal a {
+    color: rgb(0, 0, 0) !important;
+    text-decoration: none !important;
+    font-family: "Cocogoose light";
+    font-size: 14px;
+    display: inline-block;
+}
+
+.menu-principal a:hover {
+    opacity: 0.9;
+    animation: shake 0.4s ease-in-out;
+}
+/* 🔴 BOTÓN PRODUCTOS*/
+.menu-principal a.btn-menu-productos {
+    background-color: #D24672; 
+    color: white !important;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-family: "Cocogoose Bold";
+    transition: background-color 0.2s ease;
+}
+
+.menu-principal a.btn-menu-productos:hover {
+    background-color: #e85a87;
+    animation: none;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+/* 🔴 BANNER PC */
+.banner-principal {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 152px); 
+    overflow: hidden;
+    margin-top: 152px;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+}
+
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.banner-contenido {
+    position: relative;
+    text-align: center;
+    width: 95%; 
+    max-width: 1400px; 
+    z-index: 2;
+    padding-top: 25px; 
+}
+
+.logo-banner {
+    width: 340px; 
+    margin-bottom: 35px; 
+    display: inline-block;
+}
+
+.banner-contenido p {
+    font-family: "Comforta";
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 10px; 
+    line-height: 1.6;
+    color: #333;
+}
+
+/* 🔴 BOTÓN DEL BANNER */
+.btn-banner {
+    position: relative;
+    display: inline-block;
+    padding: 8px 24px;
+    background-color: #D24672; 
+    color: white !important;
+    text-decoration: none !important;
+    font-family: "Cocogoose Bold";
+    font-size: 16px;
+    border-radius: 999px;
+    box-shadow: 0 6px 0 #9E2F52; 
+    transition: all 0.1s ease;
+}
+
+.btn-banner:active {
+    top: 4px;
+    box-shadow: 0 2px 0 #9E2F52;
+}
+
+.btn-banner:hover {
+    background-color: #e85a87;
+}
+
+
+@media (max-width: 768px) {
+    
+    .header {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo-contenedor {
+        height: 70px;
+    }
+
+    .header .logo {
+        height: 40px;
+    }
+
+
+    .banner-principal {
+        height: auto;
+        min-height: calc(100vh - 82px);
+        margin-top: 82px; 
+        padding-bottom: 60px;
+        align-items: flex-start;
+    }
+
+    .banner-contenido {
+        width: 90%;
+        padding-top: 15px;
+    }
+
+    .logo-banner {
+        width: 170px; 
+        margin-bottom: 15px;
+    }
+
+    .banner-contenido p {
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .btn-banner {
+        font-size: 14px;
+        padding: 6px 18px;
+        box-shadow: 0 4px 0 #9E2F52
+        
+    }
+    .btn-banner:active {
+        transform: translateY(4px) !important;
+        box-shadow: 0 2px 0 #9E2F52 !important;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 26px;
+        height: 18px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1100;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .menu-toggle span {
+        width: 100%;
+        height: 3px;
+        background-color: #D24672;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+  
+    .menu-principal {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: #A0CC90;
+        flex-direction: column;
+        gap: 0;
+        padding: 5px 0;
+        display: none;
+        z-index: 1090;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .menu-principal.active {
+        display: flex !important;
+    }
+
+    .menu-principal a {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 13px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* 🔴Ajuste del botón de productos dentro del menú desplegable del celular */
+    .menu-principal a.btn-menu-productos {
+        background-color: #D24672;
+        color: white !important;
+        display: inline-block;
+        width: auto; 
+        padding: 8px 20px;
+        margin: 8px 0; 
+        border-radius: 20px;
+    }
+}
+/* 🔴 ESTACIONES */
+#estaciones {
+    padding-top: 0;
+    padding-bottom: 50px;
+}
+
+.franja-decorativa {
+    height: 30px;
+    background-color: #D24672;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.titulo-estaciones {
+    font-family: "Cocogoose Bold";
+    color: #D24672;
+    font-size: 60px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.tarjeta-estacion {
+    background-color: white;
+    border: 6px solid transparent;
+    border-radius: 28px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.tarjeta-estacion:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 25px rgba(210, 70, 114, 0.15);
+}
+
+/* 🔴 CONTENEDOR ILUSTRACIÓN */
+.tarjeta-img-contenedor {
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.tarjeta-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* 🔴 TEXTO ABAJO DE LA ILUSTRACIÓN */
+.tarjeta-cuerpo {
+    padding: 20px;
+    text-align: center;
+    border-top: 6px solid transparent;
+    background-color: white; 
+}
+
+.tarjeta-cuerpo h3 {
+    font-family: "Cocogoose light";
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+
+/* 🔴 VARIACIÓN FUCCIA */
+.borde-fucsia {
+    border-color: #D24672 !important;
+}
+.borde-fucsia .tarjeta-cuerpo {
+    border-top-color: #D24672 !important;
+}
+
+/* 🔴 VARIACIÓN VERDE */
+.borde-verde {
+    border-color: #A0CC90 !important;
+}
+.borde-verde .tarjeta-cuerpo {
+    border-top-color: #A0CC90 !important;
+}
+
+/* 🔴 VARIACIÓN AMARILLA */
+.borde-amarillo {
+    border-color: #FBC46F !important;
+}
+.borde-amarillo .tarjeta-cuerpo {
+    border-top-color: #FBC46F !important;
+}
+
+
+/* 🔴 ESTRUCTURA MODALES */
+
+/* 🔴 CONTENIDO BLANCO MODAL */
+.modal-content {
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* 🔴 CUERPO MODAL */
+.modal-body {
+    padding: 0 !important;
+}
+.modal-body .row {
+    display: flex;
+    align-items: stretch;
+}
+
+/* 🔴 COLUMNA IMAGEN (Reducida y Centrada) */
+.modal-seccion-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    padding: 12px;
+    background-color: transparent;
+}
+.modal-seccion-imagen img {
+    width: 100%;
+    max-width: 96%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* 🔴 COLUMNA TEXTO */
+.modal-seccion-texto {
+    padding: 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.modal-seccion-texto h2 {
+    font-family: "Cocogoose Bold";
+    margin-bottom: 15px;
+    font-size: 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.modal-seccion-texto h2 .subtitulo-modal {
+    font-family: "Cocogoose light";
+    font-size: 18px;
+    text-transform: none;
+    margin-top: 5px;
+}
+.modal-seccion-texto p {
+    font-family: "Comforta";
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    max-width: 90%;
+}
+
+/* 🔴 BOTÓN CIERRE BASE */
+.modal-seccion-texto .btn-modal-cierre {
+    color: white !important;
+    font-family: "Cocogoose Bold";
+    border: none;
+    border-radius: 20px;
+    padding: 10px 35px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+
+    display: block;
+    margin: 30px auto 0;
+    width: fit-content;
+}
+
+/* 🔴 VARIACIONES DE COLORES  */
+
+/* 🔴 AMARILLO */
+.modal-amarillo {
+    border: 5px solid #FBC46F !important; 
+}
+.modal-amarillo .modal-seccion-texto h2 {
+    color: #FBC46F;
+}
+.modal-amarillo .btn-cierre-estacion {
+    position: relative;
+    background-color: #FBC46F !important;
+    box-shadow: 0 6px 0 #d9a04e;
+}
+
+.modal-amarillo .btn-cierre-estacion:hover {
+    background-color: #fcd292 !important; 
+    color: white !important;
+}
+.modal-amarillo .btn-cierre-estacion:active {
+    top: 4px;
+    box-shadow: 0 2px 0 #d9a04e;
+}
+
+/* 🔴 FUCSIA */
+.modal-fucsia {
+    border: 5px solid #D24672 !important;
+}
+.modal-fucsia .modal-seccion-texto h2 {
+    color: #D24672;
+}
+.modal-fucsia .btn-cierre-estacion {
+    position: relative;
+    background-color: #D24672 !important;
+    box-shadow: 0 6px 0 #a62f53;
+}
+
+.modal-fucsia .btn-cierre-estacion:hover {
+    background-color: #e85a87 !important;
+    color: white !important;
+}
+.modal-fucsia .btn-cierre-estacion:active {
+    top: 4px;
+    box-shadow: 0 2px 0 #a62f53;
+}
+
+/* 🔴 VERDE */
+.modal-verde {
+    border: 5px solid #A0CC90 !important;
+}
+.modal-verde .modal-seccion-texto h2 {
+    color: #A0CC90;
+}
+.modal-verde .btn-cierre-estacion {
+    position: relative;
+    background-color: #A0CC90 !important;
+    box-shadow: 0 6px 0 #7fa372;
+}
+
+.modal-verde .btn-cierre-estacion:hover {
+    background-color: #b3db1a !important;
+    background-color: #b5dba7 !important;
+    color: white !important;
+}
+.modal-verde .btn-cierre-estacion:active {
+    top: 4px;
+    box-shadow: 0 2px 0 #7fa372;
+}
+
+/* 🔴ANIMACIONES POR FUERA */
+#estaciones {
+    position: relative;
+    overflow: visible;
+}
+
+/* 🔴Estilo base para que se ubiquen fuera de las tarjetas, en los bordes de la pantalla */
+.ilustracion-escalonada {
+    position: absolute;
+    width: 210px; 
+    height: auto;
+    z-index: 90;  
+    pointer-events: none;
+    visibility: hidden;
+}
+
+/* 🔴 PRIMERA: Izquierda arriba */
+.ilus-1 {
+    left: 3%;      
+    top: 20%;
+}
+
+/* 🔴 SEGUNDA: Derecha media-alta */
+.ilus-2 {
+    right: 3%;    
+    top: 38%;
+}
+
+/* 🔴 TERCERA: Izquierda media-baja */
+.ilus-3 {
+    left: 3%;
+    top: 65%;
+}
+
+/* 🔴 CUARTA: Derecha abajo */
+.ilus-4 {
+    right: 3%;
+    top: 80%;
+}
+
+/* 🔴PANTALLAS */
+@media (max-width: 1350px) {
+    .ilustracion-escalonada {
+        display: none !important;
+    }
+}
+
+
+/* 🔴CARRUSEL */
+#ilustraciones-carrusel {
+    padding-bottom: 100px; 
+    background-color: white;
+}
+
+.franja-decorativa-verde {
+    height: 30px;
+    background-color: #A0CC90;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.titulo-carrusel {
+    font-family: "Cocogoose Bold";
+    color: #A0CC90;
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.caja-bordes-redondos {
+    border: 15px solid #A0CC90;
+    border-radius: 80px; 
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.img-carrusel-fija {
+    display: block;
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    object-position: center; 
+}
+
+.boton-circulo {
+    background-color: transparent !important; /* Fondo transparente para que luzcan tus flechas */
+    width: 65px !important;  /* Tamaño del área del botón */
+    height: 65px !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+    opacity: 1 !important;
+    border: none !important;
+}
+
+/* Control de tus imágenes de flechas verdes */
+.img-flecha-carrusel {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease; /* Transición para que el efecto hover sea suave */
+}
+
+/* Efecto Hover: La de la izquierda se desplaza un tris a la izquierda */
+.carousel-control-prev:hover .img-flecha-carrusel {
+    transform: scale(1.1) translateX(-4px);
+}
+
+/* Efecto Hover: La de la derecha se desplaza un tris a la derecha */
+.carousel-control-next:hover .img-flecha-carrusel {
+    transform: scale(1.1) translateX(4px);
+}
+
+
+.puntitos-carrusel {
+    position: relative !important;
+    bottom: 0 !important;
+    margin-top: 30px !important;
+    margin-bottom: 0 !important;
+    justify-content: center;
+}
+
+
+.puntitos-carrusel button {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 50% !important;
+    background-color: transparent !important;
+    border: 2px solid #A0CC90 !important;
+    margin: 0 6px !important;
+    opacity: 1 !important;
+    transition: all 0.3s ease;
+}
+
+.puntitos-carrusel button.active {
+    background-color: #A0CC90 !important;
+}
+
+/* 🔴RESPONSIVO PARA CELULAR */
+@media (max-width: 1100px) {
+    .boton-circulo {
+        margin: 0 10px;
+    }
+    .img-carrusel-fija {
+        height: 400px; 
+    }
+}
+
+
+/* 🔴BONNIE */
+
+.franja-decorativa-amarilla{
+    height: 30px;
+    background-color: #F7b767;
+    width: 100%;
+}
+
+.titulo-bonnie-seccion{
+    font-family: "Cocogoose Bold";
+    color: #F7b767;
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.subtitulo-bonnie-general{
+    font-family: "Comforta";
+    font-size: 20px;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.franja-personaje{
+    padding: 60px 0;
+}
+
+.fondo-crema{
+    background-color: #fcf5e8;
+}
+
+.img-personaje{
+    max-height: 550px;
+    object-fit: contain;
+}
+
+.nombre-version{
+    font-family: "Cocogoose Bold";
+    color: #F7b767;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.descripcion-version{
+    font-family: "Comforta";
+    color: #333;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.parentesis-version-principal{
+    font-family: "Cocogoose light";
+    color: #F7b767;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+/* --- 🔴 FOOTER BONNIE --- */
+.footer-bonnie {
+    background-color: #ffe3be;
+    color: #333333;
+    padding: 60px 20px;
+    margin-top: 0px;
+    border-top: none !important;
+}
+
+.footer-logo {
+    width: 250px; 
+    height: auto;
+    margin: 0 auto 15px auto;
+    display: block;
+    object-fit: contain;
+}
+
+.footer-bonnie p,
+.footer-bonnie a {
+    font-family: "Comfortaa";
+    color: #444444;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+.footer-bonnie .footer-titulo-amarillo {
+    font-family: "Cocogoose Bold", sans-serif;
+    color: #f1a240; 
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.footer-links a {
+    display: block; 
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #F7b767;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-credito {
+    font-weight: bold;
+    font-size: 15px !important;
+    color: #333333 !important;
+}
+
+.footer-eslogan {
+    font-size: 14px !important;
+    font-style: italic;
+    line-height: 1.4;
+    color: #666666;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* --- 🔴 BOTON VOLVER ARRIBA --- */
+
+.btn-Arriba {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 100px;
+    height: 100px;
+    background-color: transparent; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.img-btn-arriba {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
+    transition: transform 0.3s ease;
+}
+
+.btn-Arriba:hover .img-btn-arriba {
+    transform: translateY(-5px) scale(1.05);
+}
+
+.btn-Arriba.show {
+    opacity: 1;
+    visibility: visible;
+}
