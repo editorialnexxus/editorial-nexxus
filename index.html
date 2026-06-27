@@ -122,7 +122,7 @@
                                 <img src="img/logo-instagram.svg" alt="Instagram" class="icono-instagram">
                             </a>
                         </div>
-                        <h3>Sara Alejandra Urrego Tobar</h3>
+                        <h3>Sara Alejandra Urrego Tovar</h3>
                         <h4>Ilustración y Apoyo Editorial</h4>
                         <p>Diseño de Empaques · Corrección de Textos</p>
                     </div>
@@ -157,33 +157,91 @@
     <section id="contacto" class="seccion-contacto">
         <h2>Contáctanos</h2>
         <p class="texto-contacto">
-            Si tienes ideas o propuestas que nos ayuden a mejorar, nos encantaría conocer tu opinión.
+         Si tienes ideas o propuestas que nos ayuden a mejorar, nos encantaría conocer tu opinión.
         </p>
 
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 text-center mb-4 mb-md-0">
+             <div class="col-md-6 text-center mb-4 mb-md-0">
                     <img src="img/contactanos-logo.svg" alt="Contacto ilustracion" class="img-contacto">
-                </div>
+            </div>
 
-                <div class="col-md-6">
-                    <iframe
-                      id="JotFormIFrame-261708260383659"
-                      title="Formulario de contacto NEXXUS"
-                      allowtransparency="true"
-                      allow="geolocation; microphone; camera; fullscreen; payment"
-                      src="https://form.jotform.com/261708260383659"
-                      frameborder="0"
-                      style="min-width:100%;max-width:100%;height:539px;border:none;"
-                      scrolling="no"
-                    >
-                    </iframe>
-                    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-                    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-261708260383659']", "https://form.jotform.com/")</script>
+                <div class="col-md-6 text-start">
+                    <!-- 🌟 FORMULARIO EDITORIAL NEXXUS INTEGRADO -->
+                    <form action="https://formspree.io/f/meebkajr" method="POST" class="formulario-nexxus p-4">
+                    
+                        <div class="mb-3">
+                            <label for="nombre" class="label-nexxus">Nombre completo</label>
+                            <input type="text" name="name" id="nombre" class="form-control input-nexxus" placeholder="Escribe tu nombre" required>
+                        </div>
+
+                        <div class="mb-3">
+                         <label for="email" class="label-nexxus">Correo electrónico</label>
+                         <input type="email" name="email" id="email" class="form-control input-nexxus" placeholder="nombre@ejemplo.com" required>
+                     </div>
+
+                     <div class="mb-3">
+                            <label for="mensaje" class="label-nexxus">Tu opinión o propuesta</label>
+                            <textarea name="message" id="mensaje" class="form-control input-nexxus" rows="4" placeholder="Déjanos tus ideas aquí..." required></textarea>
+                        </div>
+
+                        <div class="text-end">
+                            <button type="submit" id="btn-enviar" class="btn-enviar-nexxus">Enviar Mensaje</button>
+                        </div>
+
+                        <!-- MENSAJE -->
+                        <div id="mensaje-exito" class="text-center mt-3 fw-bold" style="display: none; color: #600808; font-family: 'Montserrat';">
+                             ¡Tu mensaje ha sido enviado con éxito!
+                        </div>
+
+                    </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <script>
+    const formulario = document.querySelector('.formulario-nexxus');
+    const mensajeExito = document.getElementById('mensaje-exito');
+    const botonEnviar = document.getElementById('btn-enviar');
+
+    formulario.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        
+        botonEnviar.textContent = "Enviando...";
+        botonEnviar.disabled = true;
+
+        const datos = new FormData(formulario);
+
+        fetch(formulario.action, {
+            method: formulario.method,
+            body: datos,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                formulario.reset();
+                mensajeExito.style.display = 'block';
+                botonEnviar.textContent = "Enviar Mensaje";
+                botonEnviar.disabled = false;
+                
+                setTimeout(() => {
+                    mensajeExito.style.display = 'none';
+                }, 5000);
+            } else {
+                alert("Hubo un problema al enviar tu mensaje. Por favor, inténtalo de nuevo.");
+                botonEnviar.textContent = "Enviar Mensaje";
+                botonEnviar.disabled = false;
+            }
+        }).catch(error => {
+            alert("Hubo un error de conexión. Inténtalo más tarde.");
+            botonEnviar.textContent = "Enviar Mensaje";
+            botonEnviar.disabled = false;
+        });
+    });
+</script>
+
 
     <a href="#" class="btn-Arriba" id="btnArriba">↑</a>
     <script>

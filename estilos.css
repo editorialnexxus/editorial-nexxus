@@ -289,6 +289,57 @@ body{
     display: block;
 }
 
+/* Contenedor blanco para que los campos resalten sobre el fondo lila #EDD5FF */
+.formulario-nexxus {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(96, 8, 8, 0.06); /* Sombra muy suave color vino */
+}
+
+/* Estilo para las etiquetas de texto (Nombre, Correo...) */
+.label-nexxus {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #600808; /* Tu color vino principal */
+    margin-bottom: 5px;
+}
+
+/* Estilo para las cajas donde el usuario escribe */
+.input-nexxus {
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid #ecd5ff; /* Borde lila sutil que combina con tu fondo */
+    border-radius: 10px;
+    padding: 10px;
+    color: #333333;
+}
+
+/* Cuando el usuario hace clic para escribir dentro de la caja */
+.input-nexxus:focus {
+    border-color: #600808; /* Cambia a tu color vino */
+    box-shadow: 0 0 0 0.2rem rgba(96, 8, 8, 0.15);
+}
+
+/* Botón corporativo de la Editorial */
+.btn-enviar-nexxus {
+    font-family: "Montserrat", sans-serif;
+    background-color: #600808; /* Fondo vino */
+    color: #ffffff; /* Texto blanco */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px; /* Bordes ovalados elegantes */
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto al pasar el mouse por encima del botón */
+.btn-enviar-nexxus:hover {
+    background-color: #7d1212; /* Un vino un poco más vivo */
+    transform: translateY(-2px); /* Pequeña animación hacia arriba */
+}
+
 .btn-Arriba{
     position: fixed;
     bottom: 25px;
