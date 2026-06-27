@@ -189,8 +189,7 @@ body {
     }
 
     .logo-banner {
-        width: 100px;
-        margin-bottom: 20px;
+        display: none !important;
     }
 
     .banner-contenido p {
@@ -220,8 +219,7 @@ body {
     }
 
     .logo-banner {
-        width: 100px !important; /* Hace el logo sustancialmente más pequeño para ganar espacio vertical */
-        margin-bottom: 15px !important;
+        display: none !important;
     }
 
     .banner-contenido p {
