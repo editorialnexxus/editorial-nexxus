@@ -189,7 +189,7 @@ body {
     }
 
     .logo-banner {
-        width: 200px;
+        width: 100px;
         margin-bottom: 20px;
     }
 
@@ -220,14 +220,14 @@ body {
     }
 
     .logo-banner {
-        width: 200px !important; /* Hace el logo sustancialmente más pequeño para ganar espacio vertical */
+        width: 100px !important; /* Hace el logo sustancialmente más pequeño para ganar espacio vertical */
         margin-bottom: 15px !important;
     }
 
     .banner-contenido p {
         font-size: 16px !important; /* Reduce ligeramente la letra a 16px solo si la pantalla es muy bajita */
         line-height: 1.4 !important;
-        max-width: 850px !important;
+        max-width: 950px !important;
         margin: 0 auto 15px auto !important;
     }
 
