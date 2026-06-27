@@ -189,12 +189,12 @@ body {
     }
 
     .logo-banner {
-        width: 0px; 
+        width: 200px;
         margin-bottom: 20px;
     }
 
     .banner-contenido p {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.5; 
         width: 100%;
         max-width: 1300px;
@@ -206,7 +206,36 @@ body {
         padding: 8px 24px;
     }
 }
+/*  REGLA ANTIBOMBAS: Protege el diseño en CUALQUIER pantalla bajita (Portátiles en general) */
+@media (max-height: 800px) and (min-width: 769px) {
+    .banner-principal {
+        height: auto !important; /* Le quita la altura fija rígida */
+        min-height: calc(100vh - 152px);
+        padding-bottom: 80px !important; /* Le da aire abajo para que la ilustración no pise el botón */
+    }
 
+    .banner-contenido {
+        width: 85% !important;
+        padding-top: 10px !important; /* Sube todo el bloque hacia el cielo amarillo */
+    }
+
+    .logo-banner {
+        width: 200px !important; /* Hace el logo sustancialmente más pequeño para ganar espacio vertical */
+        margin-bottom: 15px !important;
+    }
+
+    .banner-contenido p {
+        font-size: 16px !important; /* Reduce ligeramente la letra a 16px solo si la pantalla es muy bajita */
+        line-height: 1.4 !important;
+        max-width: 850px !important;
+        margin: 0 auto 15px auto !important;
+    }
+
+    .btn-banner {
+        font-size: 14px !important;
+        padding: 8px 20px !important;
+    }
+}
 @media (max-width: 768px) {
     
     .header {
